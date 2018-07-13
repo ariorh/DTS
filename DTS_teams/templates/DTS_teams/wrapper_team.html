@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota Tournament Stats</title>
+      {% load staticfiles %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css'%}" >
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/vkladki.css' %}" >
+  </head>
+<body>
+ <!--Хедер-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">DTS</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li> <a href="/teams">Teams</a> </li>
+            <li> <a href="#">Pro Circuit Rating</a> </li>
+            <li> <a href="#">Tournaments</a> </li>
+            <li> <a href="#">Contacts</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="row" style="padding-left:15px"> <!--вот тут надо разобраться, куда делись 15 пикселей -->
+
+  <!--Левая часть-->
+      <div class="col-md-5 col-12" style="padding-left: 0px; padding-right: 0px; background-color: #242424; min-height: 800px; height: auto !important;"> <!-- почему-то не работает px-0-->
+
+      <!--Левая часть, логотип-->
+          <div class="centered logo">
+            {% block logo %}
+            {% endblock %}
+          </div>
+      <!--Левая часть, колонки-->
+      <div class="container-fluid centered">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="active" ><a class="nav-item" href="#achievements3" role="tab" data-toggle="tab">2017-2018</a></li>
+          <li><a class="nav-item" href="#achievements2" role="tab" data-toggle="tab">2016-2017</a></li>
+          <li><a class="nav-item" href="#achievements1" role="tab" data-toggle="tab">2015-2016</a></li>
+          <li><a class="nav-item" href="#achievements4" role="tab" data-toggle="tab">International</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active fade in" id="achievements3">{% block achievements3 %}
+          {% endblock %}</div>
+          <div role="tabpanel" class="tab-pane fade" id="achievements2">{% block achievements2 %}
+          {% endblock %}</div>
+          <div role="tabpanel" class="tab-pane fade" id="achievements1">{% block achievements1 %}
+          {% endblock %}</div>
+          <div role="tabpanel" class="tab-pane fade" id="achievements4">{% block achievements4 %}
+          {% endblock %}</div>
+        </div>
+      </div>
+
+      <div class="container-fluid centered">
+        <hr width=parent-width, size=1px>
+      </div>
+      <div class="roster centered">
+        <h3>Current roster:</h3>
+          {% block roster %}
+          {% endblock %}
+      </div>
+      </div>
+
+
+    <!--Правая часть-->
+    <div class="col-md-7 col-12" style="padding-right: 0px; padding-left: 0px">
+
+      <!--Правая часть, колонки-->
+
+      <div class="container-fluid centered" style="padding-top: 20px">
+        <ul class="nav nav-tabs nav-justified" style="width:100%" role="tablist">
+          <li class="active" ><a class="nav-item" href="#information" role="tab" data-toggle="tab">Information</a></li>
+          <li><a class="nav-item" href="#last_results" role="tab" data-toggle="tab">Last results</a></li>
+          <li><a class="nav-item" href="#previous_members" role="tab" data-toggle="tab">Previous members</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active fade in" id="information">{% block description %}
+          {% endblock %}</div>
+          <div role="tabpanel" class="tab-pane fade" id="last_results">{% block upcoming %}
+          {% endblock %}</div>
+          <div role="tabpanel" class="tab-pane fade" id="previous_members">{% block previous_members %}
+          {% endblock %}</div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+</div>
+
+      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

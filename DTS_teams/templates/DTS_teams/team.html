@@ -1,0 +1,43 @@
+{% extends "DTS_teams/wrapper_team.html" %}
+
+{% block logo %}
+            {{ teams.logo|safe }}
+{% endblock %}
+
+{% block achievements3 %}
+            {{teams.achievements3|safe}}
+{% endblock %}
+
+{% block achievements2 %}
+            {{teams.achievements2|safe}}
+{% endblock %}
+
+{% block achievements1 %}
+            {{teams.achievements1|safe}}
+{% endblock %}
+
+{% block achievements4 %}
+            {{teams.achievements4|safe}}
+{% endblock %}
+
+{% block roster %}
+          <p>{{ teams.pos1 }}</p>
+          <p>{{ teams.pos2 }}</p>
+          <p>{{ teams.pos3 }}</p>
+          <p>{{ teams.pos4 }}</p>
+          <p>{{ teams.pos5 }}</p>
+{% endblock %}
+
+{% block description %}
+    <p class="textvkladki">
+            {{ teams.description }}
+    </p>
+{% endblock %}
+
+{% block upcoming %}
+              {{teams.upcoming_events|safe}}
+{% endblock %}
+
+{% block previous_members %}
+              {{teams.previous_members|safe}}
+{% endblock %}
