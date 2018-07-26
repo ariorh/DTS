@@ -4,39 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dota Tournament Stats</title>
-      {% load staticfiles %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css'%}" >
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/vkladki.css' %}" >
+      {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" > 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vkladki.css' %} ">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
 <body>
  <!--Хедер-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="/" class="navbar-brand">DTS</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li> <a href="/teams">Teams</a> </li>
-            <li> <a href="#">Pro Circuit Rating</a> </li>
-            <li> <a href="#">Tournaments</a> </li>
-            <li> <a href="#">Contacts</a> </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+ <div class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a href="/" class="navbar-brand">DTS</a>
+     </div>
+     <div class="navbar-collapse collapse">
+       <ul class="nav navbar-nav navbar-right">
+         <li> <a href="/teams">Teams</a> </li>
+         <li> <a href="#">Pro Circuit Rating</a> </li>
+         <li> <a href="#">Tournaments</a> </li>
+         <li> <a href="#">Contacts</a> </li>
+       </ul>
+     </div>
+   </div>
+ </div>
+
     {% block content %}
     {% endblock %}
 
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 </body>
 </html>

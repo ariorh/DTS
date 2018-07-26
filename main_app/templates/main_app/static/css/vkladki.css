@@ -1,0 +1,103 @@
+.tabs {
+    width: 100%;
+    margin: 0% 10px 0%;
+
+}
+.tabs>input {
+    display: none;
+}
+.tabs>div { display: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: #242424;
+    width: 98.7%;
+    text-align: center;
+}
+.tabs>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #aaa;
+    border-bottom: 1px solid #C0C0C0;
+    background: #333333;
+    cursor: pointer;
+    width: 25%;
+}
+.tabs>input:checked + label {
+    color: #cccccc;
+    background: #444444;
+    width: 25%;
+}
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 { display: block; }
+
+p.tableresults{
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.articlestable{
+  font-size: 14px;
+}
+
+.articlestable2{
+  font-size: 18px;
+}
+
+
+.tabs2 {
+    width: 100%;
+    margin: 0% 0% 20%;
+
+}
+.tabs2>input {
+    display: none;
+}
+.tabs2>div {
+    display: none;
+    padding-bottom: 12px;
+    height: 400px;
+    background: #2e2e2e;
+    width: 98.7%;
+    text-align: center;
+}
+.tabs2>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #aaa;
+    border-bottom: 1px solid #C0C0C0;
+    background: #444444;
+    cursor: pointer;
+    width: 33%;
+}
+.tabs2>input:checked + label {
+    color: #cccccc;
+    background: #333333;
+    width: 33%;
+}
+#tab_12:checked ~ #txt_12,
+#tab_22:checked ~ #txt_22,
+#tab_32:checked ~ #txt_32 { display: block; }
+
+.righttable{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.textvkladki{
+  font-family: inherit;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+
+}
